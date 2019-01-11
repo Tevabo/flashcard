@@ -1,8 +1,9 @@
 ****************PRIORITIES****************
 
 MUST DO
-0) Have basic html/css loadout
-1) Display a box with text on it
+0) X Have basic html/css loadout 
+1) X Display a box with text on it
+1.5) Insert question text into card box
 2) Click box = change box
 3) Display previous & next button
 4) Make previous and next button move through array
