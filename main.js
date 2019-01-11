@@ -41,32 +41,16 @@ function displayQuestion (question) {
 }
 
 function toggleAnswer (){ 
-    let question = document.getElementById("question")
-
-    let answer = document.getElementById("answer");
-    console.log(answer);
-
     answerParagraph.style.display = "block"
     questionParagraph.style.display = "none"
     
 }
-toggleAnswer();
-
-
-
-
-
-
-
-
-
-
-
 
 
 let currentQuestion = 0;
 
 displayQuestion(questionsList[currentQuestion])
+
 
 function changeQuestion(direction) {
 
@@ -81,5 +65,7 @@ function changeQuestion(direction) {
 
     displayQuestion(questionsList[currentQuestion])
 }
+
+
 
 // console.log(changeQuestion('next'))
