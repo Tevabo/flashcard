@@ -11,48 +11,42 @@
     
 </head>
 <body>
+
     <main>
-        <aside class="categories">
-            <h2>Categories</h2>
-            <ul>
-                <li>Cat 1</li>
-            </ul>
-        </aside>
+            <!-- <h1 class="title">Flash card</h1> -->
         <section class="interface">
-            <h1 id="counter">Question 1 of 20</h1>
-            <div id="card" onclick="toggleAnswer()">
-                
-            </div>
+                <section class="change-buttons">
+                    <button class="add-button">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <button class="random-button" onclick="shuffleCard()">
+                        <i class="fas fa-random"></i>
+                    </button>
+                </section>
+        
+            <h1 id="counter"></h1>
+            <div id="card" onclick="toggleAnswer()"></div>
 
-            <form class="add-question">
-                <input type="text" placeholder="Type your question">
-                <input type="text">
-            </form>
+            
   
-            <section class="change-buttons">
-                <button>
-                    Add
-                    <i class="fas fa-plus"></i>
-                </button>
-                <button onclick="shuffleCard()">
-                    Randomize
-                    <i class="fas fa-question"></i>
-                </button>
-            </section>
-
+            
             <section class="order-buttons">
-                <button onclick="changeQuestion('previous')">
-                        <i class="far fa-arrow-alt-circle-left"></i>
-                        Previous
+                <button class="previous-button" onclick="changeQuestion('previous')">
+                    <i class="far fa-arrow-alt-circle-left"></i>
+                    Previous
                 </button>
                     
-                <button onclick="changeQuestion('next')">
+                <button class="next-button" onclick="changeQuestion('next')">
                     Next
                     <i class="far fa-arrow-alt-circle-right"></i>
                 </button>
 
             </section>
         </section>
+        <form class="add-question">
+                <input type="text" placeholder="Type your question">
+                <input type="text">
+            </form>
     </main>
     <script src="main.js"></script>
 </body>

@@ -11,28 +11,29 @@ const cardContent = [
         Question: "What's a shorter way of writing i = i + 1?",
         Answer: "i++;"
     },
+    {
+        Question: "How do you write \"Hello World\" in an alert box?",
+        Answer: "alert(\"Hello World\");"
+    }
 ]
 
 let currentQuestion = 0;
 
 
-function shuffleCard() {
-    
+function shuffleCard() { 
     let random = Math.floor(Math.random() * cardContent.length)
-    console.log(random)
     displayCard(cardContent[random])
 }
 
 //declaring question and answer variables
-
 let questionParagraph = document.createElement("p")
     questionParagraph.id = "question";
 
 let answerParagraph = document.createElement("p")
     answerParagraph.id = "answer";    
-    // answerParagraph.style.display = "none"
 
 
+// Changing the counter text
 function changeCounter() {
     let counter = document.getElementById("counter")
     counter.innerHTML = `Question ${currentQuestion + 1} of ${cardContent.length}`
@@ -56,6 +57,7 @@ function displayCard (question) {
     card.appendChild(answerParagraph)
 }
 
+// Toggle between answer and question
 function toggleAnswer (){ 
 
     if(answerParagraph.style.display === "none") {
@@ -67,16 +69,9 @@ function toggleAnswer (){
     }
 }
 
-
-
-
-
-
+// Changing the current question
 function changeQuestion(direction) {
 
-    console.log(currentQuestion)
-
-    
     switch(direction) {
         case 'previous':
         if(currentQuestion > 0) {

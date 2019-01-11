@@ -1,21 +1,38 @@
 main {
-    display: flex;
-    width: 100%;
-    justify-content: center;
+    width: 80%;
     background-color: #FFF;
+    min-height: 20rem;
+    margin: 0 auto;
+    border-radius: 0.5rem;
+    text-align: center;
+    padding: 1rem;
 }
 
 body {
-    background-color: lightgray;
+    background-color: lightslategray
+    
 }
 
 .categories, .interface, .counter  {
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
 }
 
 #card {
     min-height: 5rem;
-    border: 1px solid red;
+    border: 1px solid black;
+    border-radius: 1vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.interface {
+    max-width: 90%;
+    margin: 0 auto;
+    padding-top: 1rem;
 }
 
 .add-question {
@@ -23,6 +40,29 @@ body {
 }
 
 .change-buttons, .order-buttons {
+    margin-top: 1rem;
     display: flex;
     justify-content: space-between;
+}
+
+.next-button, .previous-button {
+    background: linear-gradient(to left,#ee0979, #ff6a00);
+    color: #FFF;
+    text-shadow: 1px 0 0 black;
+}
+
+.next-button, .previous-button, .random-button, .add-button {
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 1rem;
+    border: 1px solid transparent;
+}
+
+.random-button, .add-button {
+    font-size: 1.5rem;
+}
+
+.title {
+    border-bottom: 1px solid black;
+    padding-bottom: 1rem;
 }
