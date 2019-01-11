@@ -1,4 +1,4 @@
-const questionsList = [
+const cardContent = [
     {
         Question: "'Let' and 'Const' are examples of ...",
         Answer: "Variables"
@@ -26,7 +26,7 @@ let answerParagraph = document.createElement("p")
 
 
 // Adding question to question box
-function displayQuestion (question) {
+function displayCard (question) {
     let card = document.getElementById("card");
     card.innerHTML = null;
 
@@ -54,7 +54,7 @@ function toggleAnswer (){
 
 let currentQuestion = 0;
 
-displayQuestion(questionsList[currentQuestion])
+displayQuestion(cardContent[currentQuestion])
 
 
 function changeQuestion(direction) {
@@ -68,7 +68,7 @@ function changeQuestion(direction) {
         break;
     }
 
-    displayQuestion(questionsList[currentQuestion])
+    displayQuestion(cardContent[currentQuestion])
 }
 
 
