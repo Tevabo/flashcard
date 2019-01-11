@@ -4,9 +4,12 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>FlashCard</title>
+    <link href="https://fonts.googleapis.com/css?family=Staatliches" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    
 
     
 </head>
@@ -15,21 +18,7 @@
     <main>
             <!-- <h1 class="title">Flash card</h1> -->
         <section class="interface">
-                <section class="change-buttons">
-                    <button class="add-button">
-                        <i class="fas fa-plus"></i>
-                    </button>
-                    <button class="random-button" onclick="shuffleCard()">
-                        <i class="fas fa-random"></i>
-                    </button>
-                </section>
-        
-            <h1 id="counter"></h1>
-            <div id="card" onclick="toggleAnswer()"></div>
-
-            
-  
-            
+                
             <section class="order-buttons">
                 <button class="previous-button" onclick="changeQuestion('previous')">
                     <i class="far fa-arrow-alt-circle-left"></i>
@@ -42,11 +31,33 @@
                 </button>
 
             </section>
-        </section>
-        <form class="add-question">
-                <input type="text" placeholder="Type your question">
-                <input type="text">
+            <h1 id="counter"></h1>
+            <div id="card" onclick="toggleAnswer()"></div>
+
+            <section class="change-buttons">
+                <div>
+                    <button onclick="toggleForm()" class="add-button">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                    <!-- <button onclick="deleteCard()" class="add-button">
+                        <i class="fas fa-minus"></i>
+                    </button> -->
+                </div>
+                
+                <button class="random-button" onclick="shuffleCard()">
+                    <i class="fas fa-random"></i>
+                </button>
+            </section>
+            
+  
+            <form id="add-question" onsubmit="onSubmit()">
+                <input id="submitQuestion" type="text" placeholder="Type your question">
+                <input id="submitAnswer" type="text" placeholder="Type your answer">
+                <button>Submit</button>
             </form>
+            
+        </section>
+        
     </main>
     <script src="main.js"></script>
 </body>

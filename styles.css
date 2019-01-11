@@ -1,5 +1,7 @@
+@import 'https://fonts.googleapis.com/css?family=Staatliches';
+
 main {
-    width: 80%;
+    width: 40%;
     background-color: #FFF;
     min-height: 20rem;
     margin: 0 auto;
@@ -8,13 +10,24 @@ main {
     padding: 1rem;
 }
 
+@media screen and (max-width: 500px) {
+    main {
+        width: 90%;
+    }
+}
+
 body {
     background-color: lightslategray
     
 }
 
-.categories, .interface, .counter  {
-    /* border: 1px solid gray; */
+p {
+    font-family: 'Playfair Display', serif;
+}
+
+#counter  {
+    font-family: 'Staatliches', cursive;
+    font-size: 2.5rem;
 }
 
 #card {
@@ -35,7 +48,7 @@ body {
     padding-top: 1rem;
 }
 
-.add-question {
+#add-question {
     display: none;
 }
 
@@ -49,6 +62,7 @@ body {
     background: linear-gradient(to left,#ee0979, #ff6a00);
     color: #FFF;
     text-shadow: 1px 0 0 black;
+    box-shadow: 1px 1px 4px black
 }
 
 .next-button, .previous-button, .random-button, .add-button {
@@ -65,4 +79,21 @@ body {
 .title {
     border-bottom: 1px solid black;
     padding-bottom: 1rem;
+}
+
+#add-question input {
+    height: 2rem;
+    border: 1px solid lightgray;
+    width: 100%;
+}
+
+#add-question {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#add-question button {
+    padding: 1rem;
+    width: 100%;
 }

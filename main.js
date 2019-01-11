@@ -14,11 +14,29 @@ const cardContent = [
     {
         Question: "How do you write \"Hello World\" in an alert box?",
         Answer: "alert(\"Hello World\");"
-    }
+    },
+    {
+        Question: "True or false: you can declare a function() without naming the function()",
+        Answer: "True"
+    },
+    {
+        Question: "True or false: Rails, Django and Flask are JavaScript frameworks",
+        Answer: "False"
+    },
+    {
+        Question: "What's the difference between a function parameter and an argument?",
+        Answer: "Parameters are used in function declaration, arguments are passed into the function"
+    },
 ]
 
 let currentQuestion = 0;
 
+
+function deleteCard() {
+    cardContent.splice(currentQuestion, 1)
+    
+    displayCard()
+}
 
 function shuffleCard() { 
     let random = Math.floor(Math.random() * cardContent.length)
@@ -68,6 +86,51 @@ function toggleAnswer (){
         questionParagraph.style.display = "block"
     }
 }
+
+
+
+function toggleForm() {
+    const form = document.getElementById("add-question")
+    if(form.style.display === "none") {
+        form.style.display = "block"
+    } else {
+        form.style.display = "none"
+    }
+}
+
+function isValidInput(question, answer) {
+    if(question.trim().length == 0 || answer.trim().length == 0) {
+        alert("You forgot the values")
+        return false
+    }
+
+    return true
+}
+
+function onSubmit() {
+    event.preventDefault();
+
+    const question = document.getElementById("submitQuestion")
+    const answer = document.getElementById("submitAnswer")
+
+    if(!isValidInput(question.value, answer.value)) {
+        return
+    }
+
+    cardContent.push({
+        Question: question.value,
+        Answer: answer.value
+    });
+
+    // Updating the counter
+    changeCounter()
+
+
+    question.value = null
+    answer.value = null
+}
+
+
 
 // Changing the current question
 function changeQuestion(direction) {
