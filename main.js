@@ -54,7 +54,7 @@ function toggleAnswer (){
 
 let currentQuestion = 0;
 
-displayQuestion(cardContent[currentQuestion])
+displayCard(cardContent[currentQuestion])
 
 
 function changeQuestion(direction) {
@@ -68,7 +68,7 @@ function changeQuestion(direction) {
         break;
     }
 
-    displayQuestion(cardContent[currentQuestion])
+    displayCard(cardContent[currentQuestion])
 }
 
 
