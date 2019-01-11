@@ -15,20 +15,52 @@ const questionsList = [
 ]
 
 
+//declaring question and answer variables
+
+let questionParagraph = document.createElement("p")
+    questionParagraph.id = "question";
+
+let answerParagraph = document.createElement("p")
+    answerParagraph.id = "answer";    
+    // answerParagraph.style.display = "none"
+
 
 // Adding question to question box
 function displayQuestion (question) {
-    let card = document.getElementById("card")
+    let card = document.getElementById("card");
     card.innerHTML = null;
 
-    let questionParagraph = document.createElement("p")
-    questionParagraph.id = "question"
-    questionParagraph.innerHTML = question.Question
+    answerParagraph.innerHTML = question.Answer
+    answerParagraph.style.display = "none"
+    
+    questionParagraph.innerHTML = question.Question; 
+    questionParagraph.style.display = "block"   
 
     card.appendChild(questionParagraph)
-
-    console.log(card)
+    card.appendChild(answerParagraph)
 }
+
+function toggleAnswer (){ 
+    let question = document.getElementById("question")
+
+    let answer = document.getElementById("answer");
+    console.log(answer);
+
+    answerParagraph.style.display = "block"
+    questionParagraph.style.display = "none"
+    
+}
+toggleAnswer();
+
+
+
+
+
+
+
+
+
+
 
 
 
