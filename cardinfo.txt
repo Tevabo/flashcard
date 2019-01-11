@@ -1,0 +1,37 @@
+Javascript
+
+
+1)
+Q: 'Let' and 'Const' are examples of ...
+A: Variables
+
+2)
+Q: The 'frontend' refers to which part of a program?
+A: The part of the program that the user can see (or even interact with)
+
+3) 
+Q: What's a shorter way of writing i = i + 1?
+A: i++;
+
+4)
+Q:
+A:
+
+5)
+Q:
+A:
+
+
+
+HTML
+
+
+CSS
+
+
+DOM
+
+
+TOOLS
+
+
