@@ -41,9 +41,14 @@ function displayQuestion (question) {
 }
 
 function toggleAnswer (){ 
-    answerParagraph.style.display = "block"
-    questionParagraph.style.display = "none"
-    
+
+    if(answerParagraph.style.display === "none") {
+        answerParagraph.style.display = "block"
+        questionParagraph.style.display = "none"
+    } else {
+        answerParagraph.style.display = "none"
+        questionParagraph.style.display = "block"
+    }
 }
 
 
