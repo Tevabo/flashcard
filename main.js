@@ -14,6 +14,8 @@ const cardContent = [
     
 ]
 
+let currentQuestion = 0;
+
 
 //declaring question and answer variables
 
@@ -25,8 +27,16 @@ let answerParagraph = document.createElement("p")
     // answerParagraph.style.display = "none"
 
 
+function changeCounter() {
+    let counter = document.getElementById("counter")
+    counter.innerHTML = `Question ${currentQuestion + 1} of ${cardContent.length}`
+}
+
 // Adding question to question box
 function displayCard (question) {
+
+    changeCounter()
+
     let card = document.getElementById("card");
     card.innerHTML = null;
 
@@ -52,7 +62,7 @@ function toggleAnswer (){
 }
 
 
-let currentQuestion = 0;
+
 
 
 
