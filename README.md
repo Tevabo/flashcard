@@ -17,9 +17,10 @@ EXTRA FEATURES
 2) Edit button
 3) No need to reload
 4) Categories of question
+5) Check mark to show which category you are in
     -> figure out if we fucked up by doing this so late in the project
-5) Hover hint button
-
+6) Hover hint button
+7) Category button that shows categories when clicked
 
 
 
