@@ -1,0 +1,28 @@
+main {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: #FFF;
+}
+
+body {
+    background-color: lightgray;
+}
+
+.categories, .interface, .counter  {
+    border: 1px solid gray;
+}
+
+#card {
+    min-height: 5rem;
+    border: 1px solid red;
+}
+
+.add-question {
+    display: none;
+}
+
+.change-buttons, .order-buttons {
+    display: flex;
+    justify-content: space-between;
+}
