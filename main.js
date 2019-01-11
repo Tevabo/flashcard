@@ -11,11 +11,17 @@ const cardContent = [
         Question: "What's a shorter way of writing i = i + 1?",
         Answer: "i++;"
     },
-    
 ]
 
 let currentQuestion = 0;
 
+
+function shuffleCard() {
+    
+    let random = Math.floor(Math.random() * cardContent.length)
+    console.log(random)
+    displayCard(cardContent[random])
+}
 
 //declaring question and answer variables
 
