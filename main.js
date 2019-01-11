@@ -54,23 +54,29 @@ function toggleAnswer (){
 
 let currentQuestion = 0;
 
-displayCard(cardContent[currentQuestion])
 
 
 function changeQuestion(direction) {
 
+    console.log(currentQuestion)
+
+    
     switch(direction) {
         case 'previous':
-        currentQuestion--
+        if(currentQuestion > 0) {
+            currentQuestion--
+        }
         break;
         case 'next':
-        currentQuestion++
+        if(currentQuestion < cardContent.length -1){
+            currentQuestion++
+        } 
         break;
     }
 
     displayCard(cardContent[currentQuestion])
+    
 }
 
 
-
-// console.log(changeQuestion('next'))
+displayCard(cardContent[currentQuestion])
